@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.9.5 on win32)" generated="20220929 13:24:51.603" rpa="false" schemaversion="3">
+<suite id="s1" name="Api" source="C:\Users\LORD TRADE\Desktop\Ropot\testcases\api.robot">
+<test id="s1-t1" name="GetlistUsers" line="24">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${basrurl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220929 13:24:51.734" level="INFO">Creating Session using : alias=session, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220929 13:24:51.734" endtime="20220929 13:24:51.734"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>session</arg>
+<arg>${users}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220929 13:24:52.492" level="INFO">GET Request : url=https://dummyjson.com/users 
+ path_url=/users 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220929 13:24:52.493" level="INFO">GET Response : url=https://dummyjson.com/users 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'X-Dns-Prefetch-Control': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Download-Options': 'noopen', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'X-Ratelimit-Limit': '120', 'X-Ratelimit-Remaining': '119', 'Date': 'Thu, 29 Sep 2022 11:24:53 GMT', 'X-Ratelimit-Reset': '1664450719', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"8e28-uKFjLospozByJxzZL2ktPCGhAzs"', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Transfer-Encoding': 'chunked', 'Via': '1.1 vegur'} 
+ body={"users":[{"id":1,"firstName":"Terry","lastName":"Medhurst","maidenName":"Smitham","age":50,"gender":"male","email":"atuny0@sohu.com","phone":"+63 791 675 8914","username":"atuny0","password":"9uQFF1Lh","birthDate":"2000-12-25","image":"https://robohash.org/hicveldicta.png","bloodGroup":"A−","height":189,"weight":75.4,"eyeColor":"Green","hair":{"color":"Black","type":"Strands"},"domain":"slashdot.org","ip":"117.29.86.254","address":{"address":"1745 T Street Southeast","city":"Washington","coordinates":{"lat":38.867033,"lng":-76.979235},"postalCode":"20020","state":"DC"},"macAddress":"13:69:BA:56:A3:74","university":"Capitol University","bank":{"cardExpire":"06/22","cardNumber":"50380955204220685","cardType":"maestro","currency":"Peso","iban":"NO17 0695 2754 967"},"company":{"address":{"address":"629 Debbie Drive","city":"Nashville","coordinates":{"lat":36.208114,"lng":-86.58621199999999},"postalCode":"37076","state":"TN"},"department":"Marketing","name":"Blanda-O'Keefe","title":"Help Desk Operator"},"ein":"20-9487066","ssn":"661-64-2976","userAgent":"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/12.0.702.0 Safari/534.24"},{"id":2,"firstName":"Sheldon","lastName":"Quigley","maidenName":"Cole","age":28,"gender":"male","email":"hbingley1@plala.or.jp","phone":"+7 813 117 7139","username":"hbingley1","password":"CQutx25i8r","birthDate":"2003-08-02","image":"https://robohash.org/doloremquesintcorrupti.png","bloodGroup":"O+","height":187,"weight":74,"eyeColor":"Brown","hair":{"color":"Blond","type":"Curly"},"domain":"51.la","ip":"253.240.20.181","address":{"address":"6007 Applegate Lane","city":"Louisville","coordinates":{"lat":38.1343013,"lng":-85.6498512},"postalCode":"40219","state":"KY"},"macAddress":"13:F1:00:DA:A4:12","university":"Stavropol State Technical University","bank":{"cardExpire":"10/23","cardNumber":"5355920631952404","cardType":"mastercard","currency":"Ruble","iban":"MD63 L6YC 8YH4 QVQB XHIK MTML"},"company":{"address":{"address":"8821 West Myrtle Avenue","city":"Glendale","coordinates":{"lat":33.5404296,"lng":-112.2488391},"postalCode":"85305","state":"AZ"},"department":"Services","name":"Aufderhar-Cronin","title":"Senior Cost Accountant"},"ein":"52-5262907","ssn":"447-08-9217","userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Ubuntu/11.04 Chromium/12.0.742.112 Chrome/12.0.742.112 Safari/534.30"},{"id":3,"firstName":"Terrill","lastName":"Hills","maidenName":"Hoeger","age":38,"gender":"male","email":"rshawe2@51.la","phone":"+63 739 292 7942","username":"rshawe2","password":"OWsTbMUgFc","birthDate":"1992-12-30","image":"https://robohash.org/consequunturautconsequatur.png","bloodGroup":"A−","height":200,"weight":105.3,"eyeColor":"Gray","hair":{"color":"Blond","type":"Very curly"},"domain":"earthlink.net","ip":"205.226.160.3","address":{"address":"560 Penstock Drive","city":"Grass Valley","coordinates":{"lat":39.213076,"lng":-121.077583},"postalCode":"95945","state":"CA"},"macAddress":"F2:88:58:64:F7:76","university":"University of Cagayan Valley","bank":{"cardExpire":"10/23","cardNumber":"3586082982526703","cardType":"jcb","currency":"Peso","iban":"AT24 1095 9625 1434 9703"},"company":{"address":{"address":"18 Densmore Drive","city":"Essex","coordinates":{"lat":44.492953,"lng":-73.101883},"postalCode":"05452","state":"VT"},"department":"Marketing","name":"Lindgren LLC","title":"Mechanical Systems Engineer"},"ein":"48-3951994","ssn":"633-89-1926","userAgent":"Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:21.0.0) Gecko/20121011 Firefox/21.0.0"},{"id":4,"firstName":"Miles","lastName":"Cummerata","maidenName":"Maggio","age":49,"gender":"male","email":"yraigatt3@nature.com","phone":"+86 461 145 4186","username":"yraigatt3","password":"sRQxjPfdS","birthDate":"1969-01-16","image":"https://robohash.org/facilisdignissimosdolore.png","bloodGroup":"B+","height":157,"weight":95.9,"eyeColor":"Gray","hair":{"color":"Blond","type":"Very curly"},"domain":"homestead.com","ip":"243.20.78.113","address":{"address":"150 Carter Street","city":"Manchester","coordinates":{"lat":41.76556000000001,"lng":-72.473091},"postalCode":"06040","state":"CT"},"macAddress":"03:45:58:59:5A:7B","university":"Shenyang Pharmaceutical University","bank":{"cardExpire":"07/24","cardNumber":"3580047879369323","cardType":"jcb","currency":"Yuan Renminbi","iban":"KZ43 658B M6VS TZOU OXSO"},"company":{"address":{"address":"210 Green Road","city":"Manchester","coordinates":{"lat":41.7909099,"lng":-72.51195129999999},"postalCode":"06042","state":"CT"},"department":"Business Development","name":"Wolff and Sons","title":"Paralegal"},"ein":"71-3644334","ssn":"487-28-6642","userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.17 Safari/537.11"},{"id":5,"firstName":"Mavis","lastName":"Schultz","maidenName":"Yundt","age":38,"gender":"male","email":"kmeus4@upenn.edu","phone":"+372 285 771 1911","username":"kmeus4","password":"aUTdmmmbH","birthDate":"1968-11-03","image":"https://robohash.org/adverovelit.png","bloodGroup":"O+","height":188,"weight":106.3,"eyeColor":"Brown","hair":{"color":"Brown","type":"Curly"},"domain":"columbia.edu","ip":"103.72.86.183","address":{"address":"2721 Lindsay Avenue","city":"Louisville","coordinates":{"lat":38.263793,"lng":-85.700243},"postalCode":"40206","state":"KY"},"macAddress":"F8:04:9E:ED:C0:68","university":"Estonian University of Life Sciences","bank":{"cardExpire":"01/24","cardNumber":"4917245076693618","cardType":"visa-electron","currency":"Euro","iban":"IT41 T114 5127 716J RGYB ZRUX DSJ"},"company":{"address":{"address":"8398 West Denton Lane","city":"Glendale","coordinates":{"lat":33.515353,"lng":-112.240812},"postalCode":"85305","state":"AZ"},"department":"Support","name":"Adams Inc","title":"Web Developer I"},"ein":"18-7178563","ssn":"667-98-5357","userAgent":"Mozilla/5.0 (Windows NT 6.0) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.1 Safari/535.1"},{"id":6,"firstName":"Alison","lastName":"Reichert","maidenName":"Franecki","age":21,"gender":"female","email":"jtreleven5@nhs.uk","phone":"+351 527 735 3642","username":"jtreleven5","password":"zY1nE46Zm","birthDate":"1969-07-21","image":"https://robohash.org/laboriosamfacilisrem.png","bloodGroup":"A+","height":149,"weight":105.7,"eyeColor":"Amber","hair":{"color":"Blond","type":"Straight"},"domain":"bandcamp.com","ip":"49.201.206.36","address":{"address":"18 Densmore Drive","city":"Essex","coordinates":{"lat":44.492953,"lng":-73.101883},"postalCode":"05452","state":"VT"},"macAddress":"6C:34:D0:4B:4E:81","university":"Universidade da Beira Interior","bank":{"cardExpire":"03/22","cardNumber":"345675888286047","cardType":"americanexpress","currency":"Euro","iban":"LB69 1062 QCY5 XS5T VOKU KJFG XP4S"},"company":{"address":{"address":"6231 North 67th Avenue","city":"Glendale","coordinates":{"lat":33.5279666,"lng":-112.2022551},"postalCode":"85301","state":"AZ"},"department":"Accounting","name":"D'Amore and Sons","title":"Civil Engineer"},"ein":"78-3192791","ssn":"158-68-0184","userAgent":"Mozilla/5.0 (Windows; U; Windows NT 6.0; nb-NO) AppleWebKit/533.18.1 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5"},{"id":7,"firstName":"Oleta","lastName":"Abbott","maidenName":"Wyman","age":31,"gender":"female","email":"dpettegre6@columbia.edu","phone":"+62 640 802 7111","username":"dpettegre6","password":"YVmhktgYVS","birthDate":"1982-02-21","image":"https://robohash.org/cupiditatererumquos.png","bloodGroup":"B−","height":172,"weight":78.1,"eyeColor":"Blue","hair":{"color":"Chestnut","type":"Wavy"},"domain":"ovh.net","ip":"25.207.107.146","address":{"address":"637 Britannia Drive","city":"Vallejo","coordinates":{"lat":38.10476999999999,"lng":-122.193849},"postalCode":"94591","state":"CA"},"macAddress":"48:2D:A0:67:19:E0","university":"Institut Sains dan Teknologi Al Kamal","bank":{"cardExpire":"10/23","cardNumber":"3589640949470047","cardType":"jcb","currency":"Rupiah","iban":"GI97 IKPF 9DUO X25M FG8D UXY"},"company":{"address":{"address":"1407 Walden Court","city":"Crofton","coordinates":{"lat":39.019306,"lng":-76.660653},"postalCode":"21114","state":"MD"},"department":"Product Management","name":"Schimmel, Wilderman and Orn","title":"Sales Associate"},"ein":"29-1568401","ssn":"478-11-2206","userAgent":"Mozilla/5.0 (Windows; U; Windows NT 5.1; ru-RU) AppleWebKit/533.18.1 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5"},{"id":8,"firstName":"Ewell","lastName":"Mueller","maidenName":"Durgan","age":29,"gender":"male","email":"ggude7@chron.com","phone":"+86 946 297 2275","username":"ggude7","password":"MWwlaeWcOoF6","birthDate":"1964-08-24","image":"https://robohash.org/quiaharumsapiente.png","bloodGroup":"A−","height":146,"weight":52.1,"eyeColor":"Blue","hair":{"color":"Chestnut","type":"Wavy"},"domain":"homestead.com","ip":"91.200.56.127","address":{"address":"5601 West Crocus Drive","city":"Glendale","coordinates":{"lat":33.6152469,"lng":-112.179737},"postalCode":"85306","state":"AZ"},"macAddress":"72:DA:1B:D7:30:E9","university":"Wenzhou Medical College","bank":{"cardExpire":"09/23","cardNumber":"30549925358905","cardType":"diners-club-carte-blanche","currency":"Yuan Renminbi","iban":"CY02 9914 5346 0PMT G6XW TP0R AWRZ"},"company":{"address":{"address":"81 Seaton Place Northwest","city":"Washington","coordinates":{"lat":38.9149499,"lng":-77.01170259999999},"postalCode":"20001","state":"DC"},"department":"Services","name":"Corkery, Reichert and Hodkiewicz","title":"Clinical Specialist"},"ein":"88-4396827","ssn":"238-41-5528","userAgent":"Mozilla/5.0 (X11; Linux amd64) AppleWebKit/534.36 (KHTML, like Gecko) Chrome/13.0.766.0 Safari/534.36"},{"id":9,"firstName":"Demetrius","lastName":"Corkery","maidenName":"Gleason","age":22,"gender":"male","email":"nloiterton8@aol.com","phone":"+86 356 590 9727","username":"nloiterton8","password":"HTQxxXV9Bq4","birthDate":"1971-03-11","image":"https://robohash.org/excepturiiuremolestiae.png","bloodGroup":"A+","height":170,"wei... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20220929 13:24:52.494" level="INFO">c:\users\lord trade\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummyjson.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220929 13:24:52.496" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220929 13:24:51.735" endtime="20220929 13:24:52.496"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:52.499" endtime="20220929 13:24:52.501"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:52.502" endtime="20220929 13:24:52.505"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:52.506" endtime="20220929 13:24:52.547"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:52.551" level="INFO">${status} = 200</msg>
+<status status="PASS" starttime="20220929 13:24:52.549" endtime="20220929 13:24:52.551"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220929 13:24:52.552" endtime="20220929 13:24:52.552"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${content}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:52.575" level="INFO">${content} = {"users":[{"id":1,"firstName":"Terry","lastName":"Medhurst","maidenName":"Smitham","age":50,"gender":"male","email":"atuny0@sohu.com","phone":"+63 791 675 8914","username":"atuny0","password":"9uQFF1L...</msg>
+<status status="PASS" starttime="20220929 13:24:52.564" endtime="20220929 13:24:52.575"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${content}</arg>
+<arg>Terry</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20220929 13:24:52.576" endtime="20220929 13:24:52.576"/>
+</kw>
+<tag>ListUser</tag>
+<status status="PASS" starttime="20220929 13:24:51.733" endtime="20220929 13:24:52.577"/>
+</test>
+<test id="s1-t2" name="GetSingleUser" line="39">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${basrurl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220929 13:24:52.581" level="INFO">Creating Session using : alias=session, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220929 13:24:52.581" endtime="20220929 13:24:52.582"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>session</arg>
+<arg>${singleuser}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220929 13:24:53.087" level="INFO">GET Request : url=https://dummyjson.com/users/1 
+ path_url=/users/1 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220929 13:24:53.087" level="INFO">GET Response : url=https://dummyjson.com/users/1 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'X-Dns-Prefetch-Control': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Download-Options': 'noopen', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'X-Ratelimit-Limit': '120', 'X-Ratelimit-Remaining': '118', 'Date': 'Thu, 29 Sep 2022 11:24:54 GMT', 'X-Ratelimit-Reset': '1664450719', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"488-KkO0CwIx0p+erMybVcTcaz/0fl4"', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Transfer-Encoding': 'chunked', 'Via': '1.1 vegur'} 
+ body={"id":1,"firstName":"Terry","lastName":"Medhurst","maidenName":"Smitham","age":50,"gender":"male","email":"atuny0@sohu.com","phone":"+63 791 675 8914","username":"atuny0","password":"9uQFF1Lh","birthDate":"2000-12-25","image":"https://robohash.org/hicveldicta.png","bloodGroup":"A−","height":189,"weight":75.4,"eyeColor":"Green","hair":{"color":"Black","type":"Strands"},"domain":"slashdot.org","ip":"117.29.86.254","address":{"address":"1745 T Street Southeast","city":"Washington","coordinates":{"lat":38.867033,"lng":-76.979235},"postalCode":"20020","state":"DC"},"macAddress":"13:69:BA:56:A3:74","university":"Capitol University","bank":{"cardExpire":"06/22","cardNumber":"50380955204220685","cardType":"maestro","currency":"Peso","iban":"NO17 0695 2754 967"},"company":{"address":{"address":"629 Debbie Drive","city":"Nashville","coordinates":{"lat":36.208114,"lng":-86.58621199999999},"postalCode":"37076","state":"TN"},"department":"Marketing","name":"Blanda-O'Keefe","title":"Help Desk Operator"},"ein":"20-9487066","ssn":"661-64-2976","userAgent":"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/12.0.702.0 Safari/534.24"} 
+ </msg>
+<msg timestamp="20220929 13:24:53.088" level="INFO">c:\users\lord trade\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummyjson.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220929 13:24:53.089" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220929 13:24:52.585" endtime="20220929 13:24:53.089"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:53.097" endtime="20220929 13:24:53.099"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:53.109" endtime="20220929 13:24:53.112"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:53.115" endtime="20220929 13:24:53.122"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:53.127" level="INFO">${status} = 200</msg>
+<status status="PASS" starttime="20220929 13:24:53.124" endtime="20220929 13:24:53.127"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220929 13:24:53.129" endtime="20220929 13:24:53.130"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${content}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:53.142" level="INFO">${content} = {"id":1,"firstName":"Terry","lastName":"Medhurst","maidenName":"Smitham","age":50,"gender":"male","email":"atuny0@sohu.com","phone":"+63 791 675 8914","username":"atuny0","password":"9uQFF1Lh","birthD...</msg>
+<status status="PASS" starttime="20220929 13:24:53.139" endtime="20220929 13:24:53.143"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${content}</arg>
+<arg>Medhurst</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20220929 13:24:53.144" endtime="20220929 13:24:53.145"/>
+</kw>
+<tag>single</tag>
+<status status="PASS" starttime="20220929 13:24:52.580" endtime="20220929 13:24:53.148"/>
+</test>
+<test id="s1-t3" name="GetSearchUser" line="54">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${basrurl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220929 13:24:53.152" level="INFO">Creating Session using : alias=session, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220929 13:24:53.152" endtime="20220929 13:24:53.153"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>session</arg>
+<arg>${searchuser}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220929 13:24:53.639" level="INFO">GET Request : url=https://dummyjson.com/users/search?q=John 
+ path_url=/users/search?q=John 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220929 13:24:53.639" level="INFO">GET Response : url=https://dummyjson.com/users/search?q=John 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'X-Dns-Prefetch-Control': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Download-Options': 'noopen', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'X-Ratelimit-Limit': '120', 'X-Ratelimit-Remaining': '117', 'Date': 'Thu, 29 Sep 2022 11:24:54 GMT', 'X-Ratelimit-Reset': '1664450719', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"4dc-nM5CSJjCYJMq60CdYUEHqTjBXTI"', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Transfer-Encoding': 'chunked', 'Via': '1.1 vegur'} 
+ body={"users":[{"id":50,"firstName":"Johnathon","lastName":"Predovic","maidenName":"Will","age":18,"gender":"male","email":"xlinster1d@bravesites.com","phone":"+351 572 534 5789","username":"xlinster1d","password":"WHAE1AtmDh","birthDate":"1965-03-22","image":"https://robohash.org/nisietqui.png","bloodGroup":"B−","height":160,"weight":75.7,"eyeColor":"Amber","hair":{"color":"Blond","type":"Straight"},"domain":"booking.com","ip":"203.203.88.16","address":{"address":"416 McIver Street","city":"Nashville","coordinates":{"lat":36.10436,"lng":-86.74411599999999},"postalCode":"37211","state":"TN"},"macAddress":"42:A3:F3:72:BA:9A","university":"Instituto Politécnico de Coimbra","bank":{"cardExpire":"11/22","cardNumber":"3566999107446018","cardType":"jcb","currency":"Euro","iban":"GE83 VQ05 7695 5638 2069 95"},"company":{"address":{"address":"172 Alburg Springs Road","city":"Alburgh","coordinates":{"lat":44.995827,"lng":-73.2201539},"postalCode":"05440","state":"VT"},"department":"Engineering","name":"Borer and Sons","title":"Assistant Professor"},"ein":"60-0161254","ssn":"336-16-4564","userAgent":"Mozilla/5.0 (Windows NT 5.2; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.41 Safari/535.1"}],"total":1,"skip":0,"limit":1} 
+ </msg>
+<msg timestamp="20220929 13:24:53.639" level="INFO">c:\users\lord trade\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummyjson.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220929 13:24:53.641" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220929 13:24:53.153" endtime="20220929 13:24:53.641"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:53.649" endtime="20220929 13:24:53.650"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:53.656" endtime="20220929 13:24:53.660"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:53.667" endtime="20220929 13:24:53.674"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:53.679" level="INFO">${status} = 200</msg>
+<status status="PASS" starttime="20220929 13:24:53.676" endtime="20220929 13:24:53.680"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220929 13:24:53.681" endtime="20220929 13:24:53.683"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${content}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:53.693" level="INFO">${content} = {"users":[{"id":50,"firstName":"Johnathon","lastName":"Predovic","maidenName":"Will","age":18,"gender":"male","email":"xlinster1d@bravesites.com","phone":"+351 572 534 5789","username":"xlinster1d","p...</msg>
+<status status="PASS" starttime="20220929 13:24:53.689" endtime="20220929 13:24:53.693"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${content}</arg>
+<arg>Johnathon</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20220929 13:24:53.694" endtime="20220929 13:24:53.695"/>
+</kw>
+<tag>search</tag>
+<status status="PASS" starttime="20220929 13:24:53.151" endtime="20220929 13:24:53.698"/>
+</test>
+<test id="s1-t4" name="GetFilterUser" line="71">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${basrurl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220929 13:24:53.707" level="INFO">Creating Session using : alias=session, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220929 13:24:53.706" endtime="20220929 13:24:53.708"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>session</arg>
+<arg>${filter}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220929 13:24:54.380" level="INFO">GET Request : url=https://dummyjson.com/users/filter?key=hair.color&amp;value=Brown 
+ path_url=/users/filter?key=hair.color&amp;value=Brown 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220929 13:24:54.381" level="INFO">GET Response : url=https://dummyjson.com/users/filter?key=hair.color&amp;value=Brown 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'X-Dns-Prefetch-Control': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Download-Options': 'noopen', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'X-Ratelimit-Limit': '120', 'X-Ratelimit-Remaining': '116', 'Date': 'Thu, 29 Sep 2022 11:24:55 GMT', 'X-Ratelimit-Reset': '1664450719', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"7bd6-VUl8FK10SYh/Jw3ENrfKsevbQMM"', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Transfer-Encoding': 'chunked', 'Via': '1.1 vegur'} 
+ body={"users":[{"id":5,"firstName":"Mavis","lastName":"Schultz","maidenName":"Yundt","age":38,"gender":"male","email":"kmeus4@upenn.edu","phone":"+372 285 771 1911","username":"kmeus4","password":"aUTdmmmbH","birthDate":"1968-11-03","image":"https://robohash.org/adverovelit.png","bloodGroup":"O+","height":188,"weight":106.3,"eyeColor":"Brown","hair":{"color":"Brown","type":"Curly"},"domain":"columbia.edu","ip":"103.72.86.183","address":{"address":"2721 Lindsay Avenue","city":"Louisville","coordinates":{"lat":38.263793,"lng":-85.700243},"postalCode":"40206","state":"KY"},"macAddress":"F8:04:9E:ED:C0:68","university":"Estonian University of Life Sciences","bank":{"cardExpire":"01/24","cardNumber":"4917245076693618","cardType":"visa-electron","currency":"Euro","iban":"IT41 T114 5127 716J RGYB ZRUX DSJ"},"company":{"address":{"address":"8398 West Denton Lane","city":"Glendale","coordinates":{"lat":33.515353,"lng":-112.240812},"postalCode":"85305","state":"AZ"},"department":"Support","name":"Adams Inc","title":"Web Developer I"},"ein":"18-7178563","ssn":"667-98-5357","userAgent":"Mozilla/5.0 (Windows NT 6.0) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.1 Safari/535.1"},{"id":9,"firstName":"Demetrius","lastName":"Corkery","maidenName":"Gleason","age":22,"gender":"male","email":"nloiterton8@aol.com","phone":"+86 356 590 9727","username":"nloiterton8","password":"HTQxxXV9Bq4","birthDate":"1971-03-11","image":"https://robohash.org/excepturiiuremolestiae.png","bloodGroup":"A+","height":170,"weight":97.1,"eyeColor":"Green","hair":{"color":"Brown","type":"Strands"},"domain":"goodreads.com","ip":"78.170.185.120","address":{"address":"5403 Illinois Avenue","city":"Nashville","coordinates":{"lat":36.157077,"lng":-86.853827},"postalCode":"37209","state":"TN"},"macAddress":"98:EE:94:A2:91:C4","university":"Nanjing University of Economics","bank":{"cardExpire":"02/24","cardNumber":"5372664789004621","cardType":"mastercard","currency":"Yuan Renminbi","iban":"BR68 9829 0581 3669 5088 5533 025N V"},"company":{"address":{"address":"12245 West 71st Place","city":"Arvada","coordinates":{"lat":39.8267078,"lng":-105.1366798},"postalCode":"80004","state":"CO"},"department":"Human Resources","name":"Gorczany Group","title":"Community Outreach Specialist"},"ein":"14-1066382","ssn":"717-26-3759","userAgent":"Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; de) AppleWebKit/528.4+ (KHTML, like Gecko) Version/4.0dp1 Safari/526.11.2"},{"id":18,"firstName":"Arely","lastName":"Skiles","maidenName":"Monahan","age":42,"gender":"male","email":"sberminghamh@chron.com","phone":"+55 886 766 8617","username":"sberminghamh","password":"cAjfb8vg","birthDate":"1958-02-05","image":"https://robohash.org/nihilharumqui.png","bloodGroup":"AB−","height":192,"weight":97,"eyeColor":"Amber","hair":{"color":"Brown","type":"Straight"},"domain":"seesaa.net","ip":"29.82.54.30","address":{"address":"5461 West Shades Valley Drive","city":"Montgomery","coordinates":{"lat":32.296422,"lng":-86.34280299999999},"postalCode":"36108","state":"AL"},"macAddress":"61:0C:8F:92:48:D5","university":"Universidade Estadual do Ceará","bank":{"cardExpire":"09/24","cardNumber":"3578078357052002","cardType":"jcb","currency":"Real","iban":"FR79 7925 2903 77HF 2ZY6 TU4M T84"},"company":{"address":{"address":"3162 Martin Luther King Junior Boulevard","city":"Fayetteville","coordinates":{"lat":36.05233310000001,"lng":-94.2056987},"postalCode":"72704","state":"AR"},"department":"Support","name":"Metz Group","title":"VP Accounting"},"ein":"55-4062919","ssn":"551-74-1349","userAgent":"Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0"},{"id":23,"firstName":"Felicity","lastName":"O'Reilly","maidenName":"Rosenbaum","age":46,"gender":"female","email":"beykelhofm@wikispaces.com","phone":"+63 919 564 1690","username":"beykelhofm","password":"zQwaHTHbuZyr","birthDate":"1967-10-05","image":"https://robohash.org/odioquivero.png","bloodGroup":"O−","height":151,"weight":96.7,"eyeColor":"Brown","hair":{"color":"Brown","type":"Curly"},"domain":"tamu.edu","ip":"141.14.53.176","address":{"address":"5114 Greentree Drive","city":"Nashville","coordinates":{"lat":36.0618539,"lng":-86.738508},"postalCode":"37211","state":"TN"},"macAddress":"4D:AB:8D:9A:E5:02","university":"University of lloilo","bank":{"cardExpire":"06/22","cardNumber":"6333837222395642","cardType":"switch","currency":"Peso","iban":"FR40 3929 7903 26S5 QL9A HUSV Z09"},"company":{"address":{"address":"1770 Colony Way","city":"Fayetteville","coordinates":{"lat":36.0867,"lng":-94.229754},"postalCode":"72704","state":"AR"},"department":"Legal","name":"Romaguera, Williamson and Kessler","title":"Assistant Manager"},"ein":"92-4814248","ssn":"441-72-1229","userAgent":"Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.872.0 Safari/535.2"},{"id":24,"firstName":"Jocelyn","lastName":"Schuster","maidenName":"Dooley","age":19,"gender":"male","email":"brickeardn@fema.gov","phone":"+7 968 462 1292","username":"brickeardn","password":"bMQnPttV","birthDate":"1966-06-02","image":"https://robohash.org/odiomolestiaealias.png","bloodGroup":"O+","height":166,"weight":93.3,"eyeColor":"Brown","hair":{"color":"Brown","type":"Curly"},"domain":"pen.io","ip":"116.92.198.102","address":{"address":"3466 Southview Avenue","city":"Montgomery","coordinates":{"lat":32.341227,"lng":-86.2846859},"postalCode":"36111","state":"AL"},"macAddress":"AF:AA:20:8E:CA:CD","university":"Bashkir State Medical University","bank":{"cardExpire":"11/21","cardNumber":"5007666357943463","cardType":"mastercard","currency":"Ruble","iban":"NL22 YBPM 0101 6695 08"},"company":{"address":{"address":"80 North East Street","city":"Holyoke","coordinates":{"lat":42.2041219,"lng":-72.5977704},"postalCode":"01040","state":"MA"},"department":"Product Management","name":"Wintheiser-Boehm","title":"Research Nurse"},"ein":"77-6259466","ssn":"291-72-5526","userAgent":"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_7; ja-jp) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27"},{"id":25,"firstName":"Edwina","lastName":"Ernser","maidenName":"Kiehn","age":21,"gender":"female","email":"dfundello@amazon.co.jp","phone":"+86 376 986 8945","username":"dfundello","password":"k9zgV68UKw8m","birthDate":"2000-09-28","image":"https://robohash.org/doloremautdolores.png","bloodGroup":"O+","height":180,"weight":102.1,"eyeColor":"Blue","hair":{"color":"Brown","type":"Wavy"},"domain":"apple.com","ip":"48.30.193.203","address":{"address":"1513 Cathy Street","city":"Savannah","coordinates":{"lat":32.067416,"lng":-81.125331},"postalCode":"31415","state":"GA"},"macAddress":"EC:59:D3:FC:65:92","university":"Wuhan University of Technology","bank":{"cardExpire":"10/23","cardNumber":"3558628665594956","cardType":"jcb","currency":"Yuan Renminbi","iban":"RS85 6347 5884 2820 5764 23"},"company":{"address":{"address":"125 John Street","city":"Santa Cruz","coordinates":{"lat":36.950901,"lng":-122.046881},"postalCode":"95060","state":"CA"},"department":"Marketing","name":"Volkman Group","title":"Cost Accountant"},"ein":"14-6307509","ssn":"266-43-5297","userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3"},{"id":28,"firstName":"Kody","lastName":"Terry","maidenName":"Larkin","age":28,"gender":"male","email":"xisherwoodr@ask.com","phone":"+81 859 545 8951","username":"xisherwoodr","password":"HLDqN5vCF","birthDate":"1979-01-09","image":"https://robohash.org/consequunturabnon.png","bloodGroup":"B−","height":172,"weight":90.2,"eyeColor":"Blue","hair":{"color":"Brown","type":"Wavy"},"domain":"elpais.com","ip":"51.102.180.216","address":{"address":"210 Green Road","city":"Manchester","coordinates":{"lat":41.7909099,"lng":-72.51195129999999},"postalCode":"06042","state":"CT"},"macAddress":"B4:B6:17:3C:41:E5","university":"Science University of Tokyo","bank":{"cardExpire":"05/23","cardNumber":"201443655632569","cardType":"diners-club-enroute","currency":"Yen","iban":"GT70 4NNE RDSR 0AJV 6AQI 4XH1 RWOC"},"company":{"address":{"address":"109 Summit Street","city":"Burlington","coordinates":{"lat":44.4729749,"lng":-73.2026566},"postalCode":"05401","state":"VT"},"department":"Support","name":"Leffler, Beatty and Kilback","title":"Recruiting Manager"},"ein":"09-1129306","ssn":"389-74-9456","userAgent":"Mozilla/6.0 (Macintosh; I; Intel Mac OS X 11_7_9; de-LI; rv:1.9b4) Gecko/2012010317 Firefox/10.0a4"},{"id":31,"firstName":"Luciano","lastName":"Sauer","maidenName":"Ankunding","age":27,"gender":"male","email":"smargiottau@altervista.org","phone":"+420 491 212 0935","username":"smargiottau","password":"pSGvhgS2A","birthDate":"1968-01-31","image":"https://robohash.org/rerumfugiatamet.png","bloodGroup":"O+","height":183,"weight":56.5,"eyeColor":"Green","hair":{"color":"Brown","type":"Strands"},"domain":"xrea.com","ip":"99.4.101.248","address":{"address":"1267 Martin Street","city":"Nashville","coordinates":{"lat":36.1404897,"lng":-86.7695179},"postalCode":"37203","state":"TN"},"macAddress":"E2:9D:26:5C:03:68","university":"Mendel University of Agriculture and Forestry","bank":{"cardExpire":"04/24","cardNumber":"6709401941085293","cardType":"laser","currency":"Koruna","iban":"SA25 64XK PRBO BZIJ KY0A WXUO"},"company":{"address":{"address":"1649 Timberridge Court","city":"Fayetteville","coordinates":{"lat":36.084563,"lng":-94.206082},"postalCode":"72704","state":"AR"},"department":"Research and Development","name":"Hermann-McLaughlin","title":"Research Associate"},"ein":"00-2318786","ssn":"759-91-9214","userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.813.0 Safari/535.1"},{"id":34,"firstName":"Darien","lastName":"Witting","maidenName":"Huel","age":42,"gender":"male","email":"aaughtonx@businessweek.com","phone":"+33 888 700 6632","username":"aaughtonx","password":"Vzwc72RhNGu","birthDate":"1970-02-16","image":"https://robohash.org/utnonnobis.png","bloodGroup":"B−","height":153,"weight":1... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20220929 13:24:54.382" level="INFO">c:\users\lord trade\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummyjson.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220929 13:24:54.383" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220929 13:24:53.711" endtime="20220929 13:24:54.384"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:54.391" endtime="20220929 13:24:54.393"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:54.400" endtime="20220929 13:24:54.404"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:54.407" endtime="20220929 13:24:54.426"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:54.448" level="INFO">${status} = 200</msg>
+<status status="PASS" starttime="20220929 13:24:54.446" endtime="20220929 13:24:54.448"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220929 13:24:54.448" endtime="20220929 13:24:54.449"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${content}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:54.459" level="INFO">${content} = {"users":[{"id":5,"firstName":"Mavis","lastName":"Schultz","maidenName":"Yundt","age":38,"gender":"male","email":"kmeus4@upenn.edu","phone":"+372 285 771 1911","username":"kmeus4","password":"aUTdmmmb...</msg>
+<status status="PASS" starttime="20220929 13:24:54.450" endtime="20220929 13:24:54.459"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${content}</arg>
+<arg>jevanson1b@admin.ch</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20220929 13:24:54.459" endtime="20220929 13:24:54.460"/>
+</kw>
+<tag>filter</tag>
+<status status="PASS" starttime="20220929 13:24:53.704" endtime="20220929 13:24:54.461"/>
+</test>
+<test id="s1-t5" name="GetUsersCart" line="88">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${basrurl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220929 13:24:54.475" level="INFO">Creating Session using : alias=session, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220929 13:24:54.474" endtime="20220929 13:24:54.475"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>session</arg>
+<arg>${userscart}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220929 13:24:54.993" level="INFO">GET Request : url=https://dummyjson.com/users/5/carts 
+ path_url=/users/5/carts 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220929 13:24:54.993" level="INFO">GET Response : url=https://dummyjson.com/users/5/carts 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'X-Dns-Prefetch-Control': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Download-Options': 'noopen', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'X-Ratelimit-Limit': '120', 'X-Ratelimit-Remaining': '115', 'Date': 'Thu, 29 Sep 2022 11:24:56 GMT', 'X-Ratelimit-Reset': '1664450719', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '752', 'Etag': 'W/"2f0-mmR14qzP2Dglicg6d4NaYQVws9w"', 'Vary': 'Accept-Encoding', 'Via': '1.1 vegur'} 
+ body={"carts":[{"id":19,"products":[{"id":43,"title":"frock gold printed","price":600,"quantity":3,"total":1800,"discountPercentage":15.55,"discountedPrice":1520},{"id":77,"title":"Rose Ring","price":100,"quantity":3,"total":300,"discountPercentage":3.22,"discountedPrice":290},{"id":50,"title":"Women Shoes","price":36,"quantity":3,"total":108,"discountPercentage":16.87,"discountedPrice":90},{"id":31,"title":"Mornadi Velvet Bed","price":40,"quantity":2,"total":80,"discountPercentage":17,"discountedPrice":66},{"id":75,"title":"Seven Pocket Women Bag","price":68,"quantity":3,"total":204,"discountPercentage":14.87,"discountedPrice":174}],"total":2492,"discountedTotal":2140,"userId":5,"totalProducts":5,"totalQuantity":14}],"total":1,"skip":0,"limit":1} 
+ </msg>
+<msg timestamp="20220929 13:24:54.994" level="INFO">c:\users\lord trade\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummyjson.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220929 13:24:54.995" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220929 13:24:54.476" endtime="20220929 13:24:54.995"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:55.006" endtime="20220929 13:24:55.007"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:55.010" endtime="20220929 13:24:55.014"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:55.022" endtime="20220929 13:24:55.026"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:55.033" level="INFO">${status} = 200</msg>
+<status status="PASS" starttime="20220929 13:24:55.030" endtime="20220929 13:24:55.033"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220929 13:24:55.035" endtime="20220929 13:24:55.036"/>
+</kw>
+<tag>usercart</tag>
+<status status="PASS" starttime="20220929 13:24:54.464" endtime="20220929 13:24:55.042"/>
+</test>
+<test id="s1-t6" name="GetUsersPost" line="105">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${basrurl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220929 13:24:55.058" level="INFO">Creating Session using : alias=session, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220929 13:24:55.056" endtime="20220929 13:24:55.058"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>session</arg>
+<arg>${userspost}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220929 13:24:55.642" level="INFO">GET Request : url=https://dummyjson.com/users/5/posts 
+ path_url=/users/5/posts 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220929 13:24:55.642" level="INFO">GET Response : url=https://dummyjson.com/users/5/posts 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'X-Dns-Prefetch-Control': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Download-Options': 'noopen', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'X-Ratelimit-Limit': '120', 'X-Ratelimit-Remaining': '114', 'Date': 'Thu, 29 Sep 2022 11:24:56 GMT', 'X-Ratelimit-Reset': '1664450719', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"55b-14tQSyO/Gyao7spU9pwwssMdHaI"', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Transfer-Encoding': 'chunked', 'Via': '1.1 vegur'} 
+ body={"posts":[{"id":17,"title":"She was in a hurry.","body":"She was in a hurry. Not the standard hurry when you're in a rush to get someplace, but a frantic hurry. The type of hurry where a few seconds could mean life or death. She raced down the road ignoring speed limits and weaving between cars. She was only a few minutes away when traffic came to a dead standstill on the road ahead.","userId":5,"tags":["french","magical","english"],"reactions":0},{"id":44,"title":"A long black shadow slid across the pavement","body":"A long black shadow slid across the pavement near their feet and the five Venusians, very much startled, looked overhead. They were barely in time to see the huge gray form of the carnivore before it vanished behind a sign atop a nearby building which bore the mystifying information \"Pepsi-Cola.\"","userId":5,"tags":["crime","english","classic"],"reactions":4},{"id":75,"title":"There was something beautiful in his hate.","body":"There was something beautiful in his hate. It wasn't the hate itself as it was a disgusting display of racism and intolerance. It was what propelled the hate and the fact that although he had this hate, he didn't understand where it came from. It was at that moment that she realized that there was hope in changing him.","userId":5,"tags":["classic","love","french"],"reactions":6}],"total":3,"skip":0,"limit":3} 
+ </msg>
+<msg timestamp="20220929 13:24:55.643" level="INFO">c:\users\lord trade\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummyjson.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220929 13:24:55.644" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220929 13:24:55.061" endtime="20220929 13:24:55.644"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:55.658" endtime="20220929 13:24:55.659"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:55.674" endtime="20220929 13:24:55.677"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:55.679" endtime="20220929 13:24:55.687"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:55.692" level="INFO">${status} = 200</msg>
+<status status="PASS" starttime="20220929 13:24:55.689" endtime="20220929 13:24:55.693"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220929 13:24:55.693" endtime="20220929 13:24:55.695"/>
+</kw>
+<tag>userpost</tag>
+<status status="PASS" starttime="20220929 13:24:55.047" endtime="20220929 13:24:55.704"/>
+</test>
+<test id="s1-t7" name="GetUserstodo" line="117">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${basrurl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220929 13:24:55.709" level="INFO">Creating Session using : alias=session, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220929 13:24:55.709" endtime="20220929 13:24:55.710"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>session</arg>
+<arg>${userstodos}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220929 13:24:56.227" level="INFO">GET Request : url=https://dummyjson.com/users/5/todos 
+ path_url=/users/5/todos 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220929 13:24:56.227" level="INFO">GET Response : url=https://dummyjson.com/users/5/todos 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'X-Dns-Prefetch-Control': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Download-Options': 'noopen', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'X-Ratelimit-Limit': '120', 'X-Ratelimit-Remaining': '113', 'Date': 'Thu, 29 Sep 2022 11:24:57 GMT', 'X-Ratelimit-Reset': '1664450719', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '244', 'Etag': 'W/"f4-r0NmNxNjo+nTXrwNyILAz4bjFxI"', 'Vary': 'Accept-Encoding', 'Via': '1.1 vegur'} 
+ body={"todos":[{"id":19,"todo":"Create a compost pile","completed":true,"userId":5},{"id":85,"todo":"Make a budget","completed":true,"userId":5},{"id":103,"todo":"Go to a local thrift shop","completed":true,"userId":5}],"total":3,"skip":0,"limit":3} 
+ </msg>
+<msg timestamp="20220929 13:24:56.227" level="INFO">c:\users\lord trade\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummyjson.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220929 13:24:56.228" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220929 13:24:55.710" endtime="20220929 13:24:56.229"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:56.238" endtime="20220929 13:24:56.240"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:56.243" endtime="20220929 13:24:56.247"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:56.255" endtime="20220929 13:24:56.259"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:56.265" level="INFO">${status} = 200</msg>
+<status status="PASS" starttime="20220929 13:24:56.262" endtime="20220929 13:24:56.265"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220929 13:24:56.267" endtime="20220929 13:24:56.268"/>
+</kw>
+<tag>usertodo</tag>
+<status status="PASS" starttime="20220929 13:24:55.708" endtime="20220929 13:24:56.274"/>
+</test>
+<test id="s1-t8" name="PostUser" line="132">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${basrurl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220929 13:24:56.294" level="INFO">Creating Session using : alias=session, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220929 13:24:56.293" endtime="20220929 13:24:56.295"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>firstName=mohamed lastName=walled age=22</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220929 13:24:56.297" level="INFO">${body} = {'firstName': 'mohamed lastName=walled age=22'}</msg>
+<status status="PASS" starttime="20220929 13:24:56.296" endtime="20220929 13:24:56.298"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>session</arg>
+<arg>${postuser}</arg>
+<arg>${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20220929 13:24:56.827" level="INFO">POST Request : url=https://dummyjson.com/users/add 
+ path_url=/users/add 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '44', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=firstName=mohamed+lastName%3Dwalled+age%3D22 
+ </msg>
+<msg timestamp="20220929 13:24:56.827" level="INFO">POST Response : url=https://dummyjson.com/users/add 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'X-Dns-Prefetch-Control': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Download-Options': 'noopen', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'X-Ratelimit-Limit': '120', 'X-Ratelimit-Remaining': '112', 'Date': 'Thu, 29 Sep 2022 11:24:57 GMT', 'X-Ratelimit-Reset': '1664450719', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '655', 'Etag': 'W/"28f-KNBPE7ntZGbNzFFH3nESpUybWdU"', 'Vary': 'Accept-Encoding', 'Via': '1.1 vegur'} 
+ body={"id":101,"firstName":"","lastName":"","maidenName":"","age":null,"gender":"","email":"","phone":"","username":"","password":"","birthDate":"","image":"","bloodGroup":"","height":null,"weight":null,"eyeColor":"","hair":{"color":"","type":""},"domain":"","ip":"","address":{"address":"","city":"","coordinates":{"lat":null,"lng":null},"postalCode":"","state":""},"macAddress":"","university":"","bank":{"cardExpire":"","cardNumber":"","cardType":"","currency":"","iban":""},"company":{"address":{"address":"","city":"","coordinates":{"lat":null,"lng":null},"postalCode":"","state":""},"department":"","name":"","title":""},"ein":"","ssn":"","userAgent":""} 
+ </msg>
+<msg timestamp="20220929 13:24:56.828" level="INFO">c:\users\lord trade\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummyjson.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220929 13:24:56.829" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220929 13:24:56.299" endtime="20220929 13:24:56.829"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:56.838" endtime="20220929 13:24:56.840"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:56.848" endtime="20220929 13:24:56.851"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:56.855" endtime="20220929 13:24:56.861"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:56.867" level="INFO">${status} = 200</msg>
+<status status="PASS" starttime="20220929 13:24:56.863" endtime="20220929 13:24:56.867"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220929 13:24:56.869" endtime="20220929 13:24:56.870"/>
+</kw>
+<tag>postuser</tag>
+<status status="PASS" starttime="20220929 13:24:56.281" endtime="20220929 13:24:56.875"/>
+</test>
+<test id="s1-t9" name="PutUser" line="145">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${basrurl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220929 13:24:56.890" level="INFO">Creating Session using : alias=session, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220929 13:24:56.889" endtime="20220929 13:24:56.891"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>lastName=salah</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220929 13:24:56.895" level="INFO">${body} = {'lastName': 'salah'}</msg>
+<status status="PASS" starttime="20220929 13:24:56.894" endtime="20220929 13:24:56.895"/>
+</kw>
+<kw name="PUT On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>session</arg>
+<arg>${putuser}</arg>
+<arg>${body}</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<msg timestamp="20220929 13:24:57.409" level="INFO">PUT Request : url=https://dummyjson.com/users/1 
+ path_url=/users/1 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '14', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=lastName=salah 
+ </msg>
+<msg timestamp="20220929 13:24:57.409" level="INFO">PUT Response : url=https://dummyjson.com/users/1 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'X-Dns-Prefetch-Control': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Download-Options': 'noopen', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'X-Ratelimit-Limit': '120', 'X-Ratelimit-Remaining': '111', 'Date': 'Thu, 29 Sep 2022 11:24:58 GMT', 'X-Ratelimit-Reset': '1664450719', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '956', 'Etag': 'W/"3bc-4xrSPabtTukNTz2JXUlBXHAc810"', 'Vary': 'Accept-Encoding', 'Via': '1.1 vegur'} 
+ body={"id":"1","firstName":"Terry","lastName":"Medhurst","maidenName":"Smitham","age":50,"gender":"male","email":"atuny0@sohu.com","phone":"+63 791 675 8914","username":"atuny0","password":"9uQFF1Lh","birthDate":"2000-12-25","image":"https://robohash.org/hicveldicta.png","bloodGroup":"A−","height":189,"weight":75.4,"eyeColor":"Green","hair":{"color":"","type":""},"domain":"slashdot.org","ip":"117.29.86.254","address":{"address":"","city":"","coordinates":{"lat":null,"lng":null},"postalCode":"","state":""},"macAddress":"13:69:BA:56:A3:74","university":"Capitol University","bank":{"cardExpire":"","cardNumber":"","cardType":"","currency":"","iban":""},"company":{"address":{"address":"","city":"","coordinates":{"lat":null,"lng":null},"postalCode":"","state":""},"department":"","name":"","title":""},"ein":"20-9487066","ssn":"661-64-2976","userAgent":"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/12.0.702.0 Safari/534.24"} 
+ </msg>
+<msg timestamp="20220929 13:24:57.410" level="INFO">c:\users\lord trade\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummyjson.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220929 13:24:57.411" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220929 13:24:56.897" endtime="20220929 13:24:57.411"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:57.422" endtime="20220929 13:24:57.423"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:57.430" endtime="20220929 13:24:57.433"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:57.438" endtime="20220929 13:24:57.443"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:57.451" level="INFO">${status} = 200</msg>
+<status status="PASS" starttime="20220929 13:24:57.447" endtime="20220929 13:24:57.451"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220929 13:24:57.458" endtime="20220929 13:24:57.459"/>
+</kw>
+<tag>put</tag>
+<status status="PASS" starttime="20220929 13:24:56.881" endtime="20220929 13:24:57.461"/>
+</test>
+<test id="s1-t10" name="DeleteUser" line="158">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${basrurl}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220929 13:24:57.477" level="INFO">Creating Session using : alias=session, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220929 13:24:57.477" endtime="20220929 13:24:57.478"/>
+</kw>
+<kw name="DELETE On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>session</arg>
+<arg>${putuser}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<msg timestamp="20220929 13:24:57.999" level="INFO">DELETE Request : url=https://dummyjson.com/users/1 
+ path_url=/users/1 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20220929 13:24:58.000" level="INFO">DELETE Response : url=https://dummyjson.com/users/1 
+ status=200, reason=OK 
+ headers={'Server': 'Cowboy', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'X-Dns-Prefetch-Control': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Download-Options': 'noopen', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'X-Ratelimit-Limit': '120', 'X-Ratelimit-Remaining': '110', 'Date': 'Thu, 29 Sep 2022 11:24:59 GMT', 'X-Ratelimit-Reset': '1664450719', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"4c0-GP4w8kg2VQ47wTMxyi9mu83cfmY"', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Transfer-Encoding': 'chunked', 'Via': '1.1 vegur'} 
+ body={"id":1,"firstName":"Terry","lastName":"Medhurst","maidenName":"Smitham","age":50,"gender":"male","email":"atuny0@sohu.com","phone":"+63 791 675 8914","username":"atuny0","password":"9uQFF1Lh","birthDate":"2000-12-25","image":"https://robohash.org/hicveldicta.png","bloodGroup":"A−","height":189,"weight":75.4,"eyeColor":"Green","hair":{"color":"Black","type":"Strands"},"domain":"slashdot.org","ip":"117.29.86.254","address":{"address":"1745 T Street Southeast","city":"Washington","coordinates":{"lat":38.867033,"lng":-76.979235},"postalCode":"20020","state":"DC"},"macAddress":"13:69:BA:56:A3:74","university":"Capitol University","bank":{"cardExpire":"06/22","cardNumber":"50380955204220685","cardType":"maestro","currency":"Peso","iban":"NO17 0695 2754 967"},"company":{"address":{"address":"629 Debbie Drive","city":"Nashville","coordinates":{"lat":36.208114,"lng":-86.58621199999999},"postalCode":"37076","state":"TN"},"department":"Marketing","name":"Blanda-O'Keefe","title":"Help Desk Operator"},"ein":"20-9487066","ssn":"661-64-2976","userAgent":"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/12.0.702.0 Safari/534.24","isDeleted":true,"deletedOn":"2022-09-29T11:24:59.064Z"} 
+ </msg>
+<msg timestamp="20220929 13:24:58.000" level="INFO">c:\users\lord trade\appdata\local\programs\python\python39\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummyjson.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220929 13:24:58.001" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220929 13:24:57.479" endtime="20220929 13:24:58.002"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:58.009" endtime="20220929 13:24:58.011"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:58.015" endtime="20220929 13:24:58.020"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220929 13:24:58.023" endtime="20220929 13:24:58.026"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${status}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220929 13:24:58.039" level="INFO">${status} = 200</msg>
+<status status="PASS" starttime="20220929 13:24:58.037" endtime="20220929 13:24:58.040"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220929 13:24:58.040" endtime="20220929 13:24:58.041"/>
+</kw>
+<tag>delete</tag>
+<status status="PASS" starttime="20220929 13:24:57.471" endtime="20220929 13:24:58.042"/>
+</test>
+<status status="PASS" starttime="20220929 13:24:51.605" endtime="20220929 13:24:58.045"/>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">delete</stat>
+<stat pass="1" fail="0" skip="0">filter</stat>
+<stat pass="1" fail="0" skip="0">ListUser</stat>
+<stat pass="1" fail="0" skip="0">postuser</stat>
+<stat pass="1" fail="0" skip="0">put</stat>
+<stat pass="1" fail="0" skip="0">search</stat>
+<stat pass="1" fail="0" skip="0">single</stat>
+<stat pass="1" fail="0" skip="0">usercart</stat>
+<stat pass="1" fail="0" skip="0">userpost</stat>
+<stat pass="1" fail="0" skip="0">usertodo</stat>
+</tag>
+<suite>
+<stat pass="10" fail="0" skip="0" id="s1" name="Api">Api</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
